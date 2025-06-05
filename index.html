@@ -7,8 +7,47 @@
         <link rel="stylesheet" href="lib/bootstrap.min.css">
         <link rel="stylesheet" href="public/css/styles.css"/>
     </head>
-    <body class="bg-light d-flex justify-content-center align-items-center vh-100">
     
+    <body class="bg-light d-flex justify-content-center align-items-center vh-100">
+          <!-- Creamos un contenedor para mostrar en pantalla -->
+        <div class="container p-4 rounded shadow bg-white" style="max-width: 400px;">
+            <h2 class="text-center mb-3">Calculadora Bootstrap</h2>
+            
+            <!-- Encabezado para mostrar los números ingresados y el mensaje para mostrar la operación actual y resultados-->
+            <div class="mb-3">
+                <div class="text-end text-muted" id="mensajeDisplay"></div>
+                <input type="text" class="form-control text-end" id="display" placeholder="0" disabled />
+
+            </div>
+
+            <!-- Ordenamos los Botones requeridos para mostrase de forma ordenada -->
+            <div class="row g-2">
+        
+        
+                <div class="col-3"><button class="btn btn-outline-danger w-100" onclick="setOperacion('+')">+</button></div>
+                <div class="col-3"><button class="btn btn-outline-danger w-100" onclick="setOperacion('-')">−</button></div>
+                <div class="col-3"><button class="btn btn-outline-danger w-100" onclick="setOperacion('*')">×</button></div>
+                <div class="col-3"><button class="btn btn-outline-danger w-100" onclick="setOperacion('/')">÷</button></div>
+                
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('1')">1</button></div>
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('2')">2</button></div>
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('3')">3</button></div>
+                
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('4')">4</button></div>
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('5')">5</button></div>
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('6')">6</button></div>
+                
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('7')">7</button></div>
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('8')">8</button></div>
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('9')">9</button></div>
+
+                <div class="col-4"><button class="btn btn-outline-primary w-100" onclick="leerNumero('0')">0</button></div>
+                <div class="col-4"><button class="btn btn-outline-secondary w-100" onclick="limpiarCaja()">Clear</button></div>
+                <div class="col-4"><button class="btn btn-outline-success w-100" onclick="calcular()">=</button></div>
+             </div>
+            
+          </div>
+        
   <script src="public/js/script.js"></script>
   <script src="lib/bootstrap.bundle.min.js"></script>
 </body>
